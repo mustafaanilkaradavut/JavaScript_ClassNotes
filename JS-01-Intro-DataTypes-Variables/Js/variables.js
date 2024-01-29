@@ -27,8 +27,8 @@ y = 37;
 total = x + y;
 console.log(total);
 
-//? GLOBAL AREA : Sharin area that finding all section in program.
-//? LOCAL AREA : It's in the block. It's describe by { } blocks. If - while - for.
+//.. GLOBAL AREA : Sharin area that finding all section in program.
+//.. LOCAL AREA : It's in the block. It's describe by { } blocks. If - while - for.
 
 const number = 5;
 

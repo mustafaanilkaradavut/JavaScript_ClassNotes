@@ -1,4 +1,4 @@
-//todo                      Important JS Element Using Mehods
+//__                      Important JS Element Using Mehods
 
 console.log("We are in the Intro JS");
 console.error("Error Message");
