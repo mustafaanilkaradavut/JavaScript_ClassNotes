@@ -35,6 +35,7 @@ let truncsolution = Math.trunc(solution);
 console.log(truncsolution);
 
 //* Virgülden sonra gelen kısımda kaç basamak göstermek istediğimizi aşağıda yer alan şekilde yaparız.
+//* Bir sayıya tofixed uygulandığında sonucu stringtir.
 
 let fixedsolution = solution.toFixed(2);
 console.log(solution.toFixed(2));
@@ -51,3 +52,29 @@ console.log(Math.pow(5, 3)); // Üslü sayı
 console.log(Math.sqrt(144)); // Karakök
 
 //__ console.clear();      =     It's used to clear the codes above it.
+
+/* -------------------------------------------------------------------------- */
+
+//! "String Data" Type
+
+let str1 = "Hello Word\" It's like a comment";
+let str2 = "Hello Word";
+let str3 = `Hello Word`;
+let str4 = String("Hello word");
+
+console.log(str3);
+console.log(typeof str4, str4);
+console.log(str1);
+console.log(str1[6]);
+
+str1[4] = "p";
+//..We can reach inside the value. Bu we cannot change it.
+
+str1 = "Hello Jupiter";
+console.log(str1);
+
+let id = 123123123;
+let nameSurname = "Elvis Dalton";
+
+console.log("Staff ", nameSurname, "'s id number: ", id);
+console.log(`Our Staff ${nameSurname}'s id number:${id}`);
