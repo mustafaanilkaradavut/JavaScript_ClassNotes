@@ -77,4 +77,34 @@ let id = 123123123;
 let nameSurname = "Elvis Dalton";
 
 console.log("Staff ", nameSurname, "'s id number: ", id);
-console.log(`Our Staff ${nameSurname}'s id number:${id}`);
+console.log(`Our Staff ${nameSurname}'s 
+id number:${id}`);
+//__This technic name Template Literal - String Literal.
+//? We can use the strings by dynamic way.
+//? It's work for the using variables when we write the strings.
+
+console.clear();
+
+//! BOOLEAN
+//* It's include true or false.
+
+let check = 0;
+
+console.log(Boolean());
+
+let control = (password = "12z45");
+console.log(Boolean(control));
+
+if (password == "12x45") {
+  console.log("System is open");
+} else {
+  console.log("System is close");
+}
+
+/* -------------------------------------------------------------------------- */
+
+//! NULL
+
+let staff = null;
+console.log(typeof null);
+console.log(null + 5);
