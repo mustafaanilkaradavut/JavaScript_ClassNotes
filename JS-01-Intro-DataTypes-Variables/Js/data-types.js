@@ -108,3 +108,34 @@ if (password == "12x45") {
 let staff = null;
 console.log(typeof null);
 console.log(null + 5);
+
+//! UNDEFINED
+
+let phoneNumber;
+console.log(phoneNumber);
+console.log(typeof phoneNumber);
+
+phoneNumber = "+9053239404924";
+console.log(typeof phoneNumber);
+
+//! NaN  - ( Not a Number)
+
+let n;
+let result = n + 15;
+console.log(result);
+console.log(isNaN(result));
+
+let result2 = 15;
+console.log(result2);
+console.log(isNaN(result2));
+
+//..NON PRIMATIVE
+//.. Array, Object, Function
+
+let stafflList = ["Ali", "Sevim", "Sinan"]; //* Array
+let staffData = { name: "Ali", surname: "Kara", age: "70" }; //* Object
+
+//* Function
+function sum() {
+  return "total=5";
+}
