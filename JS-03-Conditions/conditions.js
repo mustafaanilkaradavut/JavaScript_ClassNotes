@@ -195,10 +195,43 @@ let finalResult = "";
 // months >= 36 || (finalResult = "baby");
 // console.log(finalResult);
 
-
 //?   Falsy bir değerin tespit edilip buna göre bir değişkene başlangıç değeri vermek için kullanıma uygundur.
 let myVar = finalResult || "noname";
 console.log(myVar);
+
+/* -------------------------------------------------------------------------- */
+/*                                SWITCH - CASE                               */
+/* -------------------------------------------------------------------------- */
+
+//__ Condition have to be equal to variables.
+
+const s1 = +prompt("Enter first number:");
+const s2 = +prompt("Enter second number:");
+const operation = prompt("Enter Operation: +, -, /, *");
+
+let end = 0;
+
+switch (operation) {
+  case "+":
+    end = s1 + s2;
+    break;
+  case "-":
+    end = s1 - s2;
+    break;
+  case "/":
+    end = s1 / s2;
+    break;
+  case "*":
+    end = s1 * s2;
+    break;
+  default:
+    alert("Fault Operation");
+    break;
+}
+
+//__ `${s1}=  s1 = variable    /   = string    --> Template Literals
+
+console.log(`${s1} ${operation} ${s2} = ${end}`);
 
 //..    Final Notes !!
 //__  Tek durum var ise Short-Circuit
