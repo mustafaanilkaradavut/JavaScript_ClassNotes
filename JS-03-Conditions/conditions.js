@@ -209,7 +209,21 @@ const s1 = +prompt("Enter first number:");
 const s2 = +prompt("Enter second number:");
 const operation = prompt("Enter Operation: +, -, /, *");
 
-let end = 0;
+//** If we don't use number variable then this code give us to alert. */
+if (!s1) {
+  //* null, undefined, NaN, Boolean(0), " "  ==> Five Falsy
+  alert("Please enter correct number !");
+}
+//!             OR         we can use this way
+// if (isNaN(s1) || isNaN(s2)) {
+//   alert("Please enter correct number !");
+// }
+
+if (operation === "/" && s2 === 0) {
+  alert("Error of divide operation");
+}
+
+let end = 0; //*   This "0" is a default solution.
 
 switch (operation) {
   case "+":
@@ -230,8 +244,8 @@ switch (operation) {
 }
 
 //__ `${s1}=  s1 = variable    /   = string    --> Template Literals
-
-console.log(`${s1} ${operation} ${s2} = ${end}`);
+//* toFixed its work for 1.3333333333 --> 1.333
+console.log(`${s1} ${operation} ${s2} = ${end.toFixed(3)}`);
 
 //..    Final Notes !!
 //__  Tek durum var ise Short-Circuit
