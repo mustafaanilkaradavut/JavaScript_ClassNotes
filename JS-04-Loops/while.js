@@ -62,3 +62,5 @@ exit ? console.log("Exit Allowed") : console.log("Entered Number=", number1);
 // }
 
 // exit2 ? console.log("Exit Allowed") : console.log("Entered Number=", number2);
+
+
