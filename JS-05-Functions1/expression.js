@@ -33,3 +33,13 @@ const prime = primeCalculator(3, 4);
 console.log(prime);
 
 console.log(primeCalculator(5, 3));
+
+//?     Example-3
+
+let CalculateCircleArea = function (r) {
+  return Math.PI * r * r;
+};
+
+const r = Number(+prompt("Enter r :"));
+const result = CalculateCircleArea(r);
+console.log(`Circle Area =${result}`);
