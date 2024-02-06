@@ -37,3 +37,20 @@ function add(s1, s2) {
 const num1 = +prompt("S1:");
 const num2 = +prompt("S2:");
 add(num1, num2);
+
+//.. Should be only one return in same scope..!
+function calculate(num1, num2, operation) {
+  // console.log(num1 * num2);
+  if (operation === "+") {
+    return num1 + nuum2;
+  } else if (operation === "-") {
+    return num1 - num2;
+  } else {
+    return 0;
+  }
+}
+
+const result = calculate(3, 5, "+");
+console.log(result);
+
+console.log(calculate(4,2,"-"));
