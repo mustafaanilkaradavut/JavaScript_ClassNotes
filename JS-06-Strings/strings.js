@@ -248,7 +248,32 @@ console.log(newVariable);
 let changeVariable = variable.replaceAll("i", "e");
 console.log(changeVariable);
 
+/* --------------------------------------------------------------------------  */
+//! ---------------------- String içinde arama işlemleri --------------------- */
+/* --------------------------------------------------------------------------  */
+//..includes,   indexOf,    search,     match()     methods.
 
-/* -------------------------------------------------------------------------- */
+//__ includes()  ...yı içeriyor mu --> true ya da false bir değer döndürür. caseSensitive ( küçük - büyük harf duyarlılığı vardır.) bir özelliktedir.
 
+console.log(
+  `Is the thinkWord include "tecrübe" : ${thinkWord.includes("tecrübe")}`
+);
 
+let url = "https://clarusway.com";
+let msg = url.includes("https") ? "This web secured " : "This web not secured";
+console.log(msg);
+
+let email = "mustafaanilkaradavut.com";
+msg = email.includes("@") ? "Mail is true" : "Mail is not true";
+console.log(msg);
+
+//__ İndexOf (aranacak metin)
+//? Bir karakter ya da karakter grubumun kaçıncı sırada olduğunu yani index numarasını verir.
+
+console.log(email.indexOf("com"));
+console.log(email.indexOf("edu"));
+msg =
+  email.indexOf("edu") === -1
+    ? "This email not for education"
+    : "This email for education";
+console.log(msg);
