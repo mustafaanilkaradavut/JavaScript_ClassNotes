@@ -277,3 +277,38 @@ msg =
     ? "This email not for education"
     : "This email for education";
 console.log(msg);
+
+//__ Search()
+//? Bir string içindeki aranan elemanda ilk bulduğunun index numarasını yazar. Bulmazsa -1 döner.
+
+let desc = "Clarusway it bootcamp, Clarusway develop you IT field";
+
+console.log(desc.search("IT"));
+console.log(desc.search("it"));
+
+//?     Regex   -   Regular Expression
+//*     / ile ifade edilir.
+//*     /g --> global, bütün cümle içinde uygula.
+//*      /i --> case sensitive özelliğini kaldır. Küçük büyük olmasına bakmadan bul.
+
+console.log(desc.search(/IT/gi));
+console.log(desc.replace(/IT/gi, "Communication"));
+
+//__ Match
+//? string içinde aranan metin bulunur ve bir dizi gönderir.
+//? Regex ifadeler de kullnılabilir.
+
+let desc1 = "Today is not good and Cold, the weather is bitterly cold ";
+console.log(desc1.match(/cold/gi));
+
+let changeDesc1 = desc1.match(/cold/gi);
+console.log(changeDesc1[0]);
+console.log(changeDesc1.length);
+
+//* trim, startsWith, endsWith
+let decs2 = "       Clarusway";
+console.log(decs2.trim());
+
+sent = "Clarusway";
+console.log(sent.startsWith("c"));
+console.log(sent.endsWith("y"));
