@@ -79,13 +79,13 @@ for (let i = 0; i <= 17; i++) {
 console.log(course.length);
 
 for (let i = 0; i < course.length - 1; i++) {
-    console.log(course[i]);
+  console.log(course[i]);
 }
 console.log("***********************************");
 //*         Tersten uygulanışı;
 
 for (let i = course.length - 1; i >= 0; i--) {
-    console.log(course[i]);
+  console.log(course[i]);
 }
 
 //* Some emojis could be two characters.
@@ -94,7 +94,161 @@ console.log(emoji.length);
 
 //.. **********     STRING METHODS     **********
 
+// charAt()             Returns the character at the specified index.
+// charCodeAt()	        Returns the Unicode of the character at the specified index.
+// concat()	            Joins two or more strings, and returns a new string.
+// endsWith()	        Checks whether a string ends with a specified substring.
+// fromCharCode()	    Converts Unicode values to characters.
+// includes()	        Checks whether a string contains the specified substring.
+// indexOf()	        Returns the index of the first occurrence of the specified value in a string.
+// lastIndexOf()	    Returns the index of the last occurrence of the specified value in a string.
+// localeCompare()	    Compares two strings in the current locale.
+// match()	            Matches a string against a regular expression, and returns an array of all matches.
+// repeat()	            Returns a new string which contains the specified number of copies of the original string.
+// replace()	        Replaces the occurrences of a string or pattern inside a string with another string, and return a new string without modifying the original string.
+// search()	             Searches a string against a regular expression, and returns the index of the first match.
+// slice()	            Extracts a portion of a string and returns it as a new string.
+// split()	            Splits a string into an array of substrings.
+// startsWith()	        Checks whether a string begins with a specified substring.
+// substr()	            Extracts the part of a string between the start index and a number of characters after it.
+// substring()	        Extracts the part of a string between the start and end indexes.
+// toLocaleLowerCase()	Converts a string to lowercase letters, according to host machine's current locale.
+// toLocaleUpperCase()	Converts a string to uppercase letters, according to host machine's current locale.
+// toLowerCase()	    Converts a string to lowercase letters.
+// toString()	        Returns a string representing the specified object.
+// toUpperCase()	    Converts a string to uppercase letters.
+// trim()	            Removes whitespace from both ends of a string.
+// valueOf()	        Returns the primitive value of a String object.
+
+//? -------------------------------------------------------------------------- */
+
+//!     String Birleştirme
+
+const name = "Robert";
+const surname = "Duke";
+const job = "Developer";
+
+console.log(
+  `Our Customer's name:${name} surname:${surname} and his job:${job}`
+);
+const fullname = name.concat(surname);
+console.log(fullname);
+
+//__ toLowerCase()
+
+// console.log(fullname.toLowerCase());
+
+// const enter = "clarusway";
+// const enterCode = prompt("Plese write Enter Code:");
+
+// if (enter === enterCode.toLowerCase()) {
+//   console.log("Enter is allowed");
+// } else {
+//   console.log("Wrong Enterence Code");
+// }
+
+//__toUpperCase()
+
+const statement = "Today is a nice day with sweet and coffee";
+console.log(statement.toUpperCase());
+console.log(statement);
+
+/* --------------------------------------------------------------------------  */
+//! ---------------------------- String Parçalama ---------------------------- */
+/* --------------------------------------------------------------------------  */
+
+//__    split()
+//* Split parçaladığı bölümleri diziye çevirir.
+//* str.split(operator) --> seperator bir ayraç : ""," ",","/"
+
+let text = "Clarusway IT Bootcamp";
+console.log(text);
+console.log(text.split(""));
+
+console.log(" ");
+
+const splittedText = text.split(" ");
+console.log(splittedText);
+console.log(splittedText[2]);
+
+console.log(" ");
+
+for (let i = splittedText.length - 1; i >= 0; i--) {
+  console.log(splittedText[i]);
+}
+
+let months =
+  "Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec";
+
+console.log(months.split("/"));
+
+let list = "Harry Trump ;Fred Barney ;Helen Rigby ;Bill Abel ;Chris Hand";
+console.log(list.toUpperCase().split(";"));
+
+let newList = list.split(";");
+console.log(newList[2]);
+
+//!     WARNING     ---     JOIN AND REVERSE are not string methods but using with split.
+
+let sent = "Hello Dear Cohort 16 Students";
+let newSent = sent.split(" ");
+console.log(newSent);
+console.log(newSent[3]);
+
+//*     Reverse -   Array Method
+console.log(newSent.reverse().join(" - "));
+//*     Join -  Array Method
+
+//__ Polindrom Kelime   /      Interview Question
+
+let word = prompt("Enter a word:");
+let wordReverse = word.split("").reverse().join("");
+console.log(wordReverse);
+
+word === wordReverse
+  ? console.log("It's a polindrom")
+  : console.log("It's not a Polindrom");
+
+console.log(" ");
+//__      Slice
+
+//? String içinde bir bölümü almak için kullanılır. ( immutable, kalıcı değişlik olmaz.)
+//* Slice ( Başlangıç index numarası, bitiş index numarası ( bu numara dahil değil.))
+
+let meaningWord = "Oku da adam ol";
+console.log(meaningWord.slice(7, 11));
+console.log(meaningWord.slice(7));
+
+//* Terstende erişim sağlanabilir : Negatif değer kullanılır.
+console.log(meaningWord.slice(-2, -6));
+
+console.log(" ");
+
+//__    Substring   (Başlangıç index numarası, bitiş index numarası)
+//? Slice'dan tek farkı negatif değer kullanılmaz.
+
+console.log(meaningWord.substring(3, 8));
+
+console.clear();
+/* --------------------------------------------------------------------------  */
+//! ----------------------- String'te değişiklik yapmak ---------------------- */
+/* --------------------------------------------------------------------------  */
+
+//.. replace ( aranan,değiştirilecek)   -   replaceall ( aranan, değiştirilecek)
+//* Gördüğü ilk değeri değiştirir.
+
+let thinkWord =
+  "Tecrübe tarak gibidir; ama hayat insana kel olduğu zaman verir.";
+console.log(thinkWord.replace("kel", "saçli"));
+
+let variable = "Usir nami";
+let newVariable = variable.replace(" ", "_");
+console.log(newVariable);
+
+let changeVariable = variable.replaceAll("i", "e");
+console.log(changeVariable);
 
 
+/* -------------------------------------------------------------------------- */
 
 
