@@ -10,7 +10,7 @@ const numbers = [3, 5, 2, "4", "five", "four", 3, "4", "five", "1", 3, "five"];
 
 console.log(numbers.includes("4")); //?     true
 console.log(numbers.includes("44")); //?    false
-console.log(numbers.includes("Five")); //?  false because it's a case sensivity.
+console.log(numbers.includes("Five")); //?    false because it's a case sensivity.
 console.log(numbers.includes("FOUR".toLowerCase())); //?    true
 console.log(numbers.includes("four", 6)); //?   false       -       4 var mı 6. elemandan sonra.
 
