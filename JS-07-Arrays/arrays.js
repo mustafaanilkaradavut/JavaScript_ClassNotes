@@ -126,3 +126,8 @@ console.log(values);
 values.fill(77, 3); //__ 1. parametre değer, 2. parametre start index.
 values.fill(44, 3, 5); //__ 1. parametre değer, 2. parametre start ve 3. parametre end index.
 console.log(values);
+
+
+
+
+
