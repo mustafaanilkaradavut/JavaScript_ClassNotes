@@ -100,9 +100,29 @@ cars.splice(4, 0, "Serçe", "Togg");
 console.log(cars);
 
 //*     reverse()
-
 cars.reverse();
 console.log(cars);
 
-//*     sort()
+//*     sort()                  //  -       A'dan Z'ye sıralama.
+//!     Sort metodu diziyi iterasyona uğratır ce ascii karaktere göre sıralama yapar.
+//!     Dolayısıyla string'le doğru şekilde sıralama yapabilir.
 
+cars.sort();
+console.log(cars);
+
+//!     Ancak sayılar ile doğrudan sıralama yapılırsa ascii'den dolayı yanlış değerler sıralanmış olabilir.
+const numbersForSort = [4, 6, 2, 9, 1, 88];
+numbersForSort.sort();
+numbersForSort.sort((a, b) => a - b); //__ Callback Function  -   Asc küçükten büyüğe
+numbersForSort.sort((a, b) => b - a); //__ Callback Function  -   Desc büyükten küçüğe
+console.log(numbersForSort);
+
+//*     fill()
+
+const values = [4, 7, 45, 85, 23, 67, 34, 77];
+values.fill(0);
+console.log(values);
+
+values.fill(77, 3); //__ 1. parametre değer, 2. parametre start index.
+values.fill(44, 3, 5); //__ 1. parametre değer, 2. parametre start ve 3. parametre end index.
+console.log(values);
