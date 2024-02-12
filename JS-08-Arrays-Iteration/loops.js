@@ -69,6 +69,27 @@ console.log(exams2);
 //*         add R1,R2
 //*         gjmp R1, deneme
 
+//..        Example         -           FOR OF
+
+const departments = [
+  "St. Patrick",
+  "St. Micheal",
+  "St. Gabriel",
+  "St.Philomenas",
+];
+
+const strArrayUpperCase = (ward) => {
+  let upperCasedArray = [];
+
+  for (const ward of departments) {
+    upperCasedArray.push(ward.toUpperCase());
+  }
+  return upperCasedArray;
+};
+
+const myArray = strArrayUpperCase(departments);
+console.log(myArray, departments);
+
 /* -------------------------------------------------------------------------- */
 //?     Example ;
 //?     Öğrenciler dizisinde öğrenci isimleri saklanmaktadır. Öğrencileri aramımızı sağlayacak ve aranılan öğrenciden ne kadar sayıda bulunduğunu ana programa döndürek bir fonksiyon yazınız. Eğer aranılan isimde bir öğrenci yok ise fonksiyon "öğrenci bulunamadı döndürmelidir."
@@ -96,6 +117,7 @@ const students = [
   "Helena",
   "robert",
   "christina",
+  "robert"
 ];
 
 const nameOfStudent = "robert";
