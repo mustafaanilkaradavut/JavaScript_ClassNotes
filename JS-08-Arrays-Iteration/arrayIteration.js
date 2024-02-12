@@ -39,3 +39,33 @@ console.log(examResult);
 console.log(examResult.forEach((x) => x * x)); //*         undefined
 const pratice = examResult.forEach((x) => x * x);
 console.log(pratice); //*           undefined
+
+/* -------------------------------------------------------------------------- */
+//..                                 MAP METHOD                               */
+/* -------------------------------------------------------------------------- */
+
+//? Bir dizide ki tüm isimleri BÜYÜK harfe dönüştüren uygulamayı yazınız.
+
+const names = ["Gözde", "Pelin", "Samet", "Burak", "Eren", "Elif", "Samet"];
+const copiedNames = names.map((n) => n.toLowerCase());
+console.log(copiedNames, names);
+
+//?               Example
+//?      tlPrices dizisindeki rakamların Euro ve Dolar karşılıklarını hesaplatarak yeni dizilere kaydediniz.
+
+const euro = 32.97;
+const dolar = 30.05;
+
+const iPhoneTL = [90000, 75000, 60000, 40000, 30000];
+const iPhoneDolar = iPhoneTL.map((tl) => Math.trunc(tl / dolar));
+console.log(iPhoneDolar);
+
+const iPhoneEuro = iPhoneTL.map((tl) => Math.trunc(tl / euro));
+console.log(iPhoneEuro);
+
+/* -------------------------------------------------------------------------- */
+//..                               FILTER METHOD                              */
+/* -------------------------------------------------------------------------- */
+
+
+
