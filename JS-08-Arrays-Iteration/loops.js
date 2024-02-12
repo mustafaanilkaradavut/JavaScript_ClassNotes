@@ -64,4 +64,41 @@ console.log(underFiftyExams);
 console.log(aboveFiftyExams);
 console.log(exams2);
 
+//? low-level language example
+//* deneme: mov a,b
+//*         add R1,R2
+//*         gjmp R1, deneme
 
+/* -------------------------------------------------------------------------- */
+//?     Example ;
+//?     Öğrenciler dizisinde öğrenci isimleri saklanmaktadır. Öğrencileri aramımızı sağlayacak ve aranılan öğrenciden ne kadar sayıda bulunduğunu ana programa döndürek bir fonksiyon yazınız. Eğer aranılan isimde bir öğrenci yok ise fonksiyon "öğrenci bulunamadı döndürmelidir."
+/* -------------------------------------------------------------------------- */
+
+function searchStudent(students, nameOfStudent) {
+  let eachNameOfStudent = 0;
+
+  for (let i in students) {
+    if (students[i] === nameOfStudent) {
+      eachNameOfStudent++;
+    }
+  }
+  if (eachNameOfStudent > 0) {
+    return `The student name of ${nameOfStudent} has been finded. This name include ${eachNameOfStudent} times`;
+  } else {
+    return `The student name of ${nameOfStudent} has been not finded !!`;
+  }
+}
+
+const students = [
+  "robert",
+  "christina",
+  "aaron",
+  "Helena",
+  "robert",
+  "christina",
+];
+
+const nameOfStudent = "robert";
+
+const result = searchStudent(students, nameOfStudent);
+console.log(result);
