@@ -63,9 +63,38 @@ console.log(iPhoneDolar);
 const iPhoneEuro = iPhoneTL.map((tl) => Math.trunc(tl / euro));
 console.log(iPhoneEuro);
 
+console.log("***********************");
+
 /* -------------------------------------------------------------------------- */
 //..                               FILTER METHOD                              */
 /* -------------------------------------------------------------------------- */
 
+const salary = [30000, 70000, 15000, 29000, 47000, 95000, 80000];
 
+const averageOfSalary = salary.filter((m) => m >= 50000); //?     Sallary over then 50000.
+console.log(averageOfSalary);
 
+const lowSalary = salary.filter((m) => m >= 30000 && m < 50000); //?     Salary between 30000-50000.
+console.log(lowSalary);
+
+//__    It's %20 rise of the salary who earn less than 50000.
+//!     Chance Orginal Array
+const modifiedSalary = salary.map((m, i, arr) => {
+  if (m >= 30000 && m < 50000) {
+    arr[i] = m * 1.2;
+  }
+});
+console.log(salary);
+
+console.log("**************************");
+
+/* -------------------------------------------------------------------------- */
+//..                            CHAINING (PIPELINE)                           */
+/* -------------------------------------------------------------------------- */
+
+//?     Example : Maaşı 50000'den az olanları %20 zam yapalım. ( Orjinal diziyi değiştirerek. )
+
+const salaryCompany = [25000, 36000, 44000, 59000, 87000, 92000];
+
+const riseSalaryCompany = salary.filter((m) => m < 50000).map((m) => m * 1.2);
+console.log(riseSalaryCompany);
