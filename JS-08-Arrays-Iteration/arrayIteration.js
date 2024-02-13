@@ -98,3 +98,6 @@ const salaryCompany = [25000, 36000, 44000, 59000, 87000, 92000];
 
 const riseSalaryCompany = salary.filter((m) => m < 50000).map((m) => m * 1.2);
 console.log(riseSalaryCompany);
+
+//__      Functional Programming ( Declarative Programing)
+//__      Imperative Programming ( Do - while )
