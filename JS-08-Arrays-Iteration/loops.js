@@ -117,7 +117,7 @@ const students = [
   "Helena",
   "robert",
   "christina",
-  "robert"
+  "robert",
 ];
 
 const nameOfStudent = "robert";

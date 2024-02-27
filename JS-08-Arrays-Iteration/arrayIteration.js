@@ -101,3 +101,7 @@ console.log(riseSalaryCompany);
 
 //__      Functional Programming ( Declarative Programing)
 //__      Imperative Programming ( Do - while )
+
+
+
+
