@@ -102,6 +102,25 @@ console.log(riseSalaryCompany);
 //__      Functional Programming ( Declarative Programing)
 //__      Imperative Programming ( Do - while )
 
+/*   -------------------------------------------------------------------------- */
+//..                                   REDUCE                                   */
+/*   -------------------------------------------------------------------------- */
 
+const payments = [40000, 30000, 20000, 100000];
+const allPayments = payments.reduce((t, m) => t + m, 0);
+//__ "t'm, 0" şeklinde yazarız çünkü toplama yapamayacağımız bir değer olursa hata almamızı engeller.
 
+console.log("Result: ", allPayments);
 
+const persons = [4, 5, 3, 2];
+const strikePerson = persons.reduce((t, m) => t * m, 1);
+console.log("Strike: ", strikePerson);
+
+// !            Example
+//? Maaşı 40 binden az olanlara %50 zam yap ve yapılan zammın işverene maaliyetini ortaya çıkar.
+
+const raisePayments = payments
+  .filter((m) => m < 40000)
+  .map((m) => m * 1.5)
+  .reduce((t, m) => t + m, 0);
+console.log(raisePayments);
