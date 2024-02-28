@@ -115,24 +115,42 @@ const people = [
     lastName: "grotum",
     id: "208720237403",
     salary: 120000,
+    job: "Developer",
   },
   {
     name: "tatum",
     lastName: "hoytum",
     id: "20484923442",
     salary: 77000,
+    job: "Developer",
   },
   {
     name: "robin",
     lastName: "papara",
     id: "5958303345",
     salary: 45000,
+    job: "Tester",
   },
 ];
 
 people.forEach((p) => console.log(p.name));
 people.forEach((p) => console.log(p.salary));
+
+// const key = prompt("Which detail you wanna learn? name,lastName,id,salary");
+// people.forEach((p) => console.log(p[key]));
+
 people.forEach((p) => console.log(p["id"]));
 
-const key = prompt("Which detail you wanna learn? name,lastName,id,salary");
-people.forEach((p) => console.log(p[key]));
+//?     Maaşların toplamı
+const allSalary = people.reduce((t, p) => t + p.salary, 0);
+console.log(allSalary);
+
+//?     Job'u developer olanların isim soyisim beraber yazdırınız.
+
+const devs = people.filter((p) => p.job === "Developer");
+console.log(devs);
+
+const devNames = people
+  .filter((p) => p.job === "Developer")
+  .map((p) => `${p.name} ${p.lastName}`);
+console.log(devNames);
