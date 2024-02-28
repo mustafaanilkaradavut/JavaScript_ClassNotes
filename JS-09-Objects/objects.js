@@ -45,7 +45,94 @@ const person = {
 
 console.log(this); //?      Global alanda (window nesnesi gösterir.)
 
+//__     A.)     . notasyonu ile erişim.
+
+//* ----- OKUMA -----
 console.log(person.name);
 console.log(person.salary);
 console.log(person.languages[2]);
-console.log(person.examResults.ece201); //*     AA
+console.log(person.examResults.ece201); //*     CB
+
+console.log(person.calculateAge());
+
+//__     B.)     Square Bracket ile erişim.
+
+console.log(person["idNumber"]);
+console.log(person["examResults"]["tur208"]); //*     BA
+
+// const selector = prompt(
+//   "Which detail you wanna learn? name,surname,idNumber,bDay,salary,driverLicence,languages,examResults,bYear,calculateAge"
+// );
+
+// console.log(person[selector]); //!  square bracket yönteminde key bir değişken olabilir.
+
+// console.log(person.selector); //!   .notasyonunda key bir değişken olamaz.
+
+console.log(person);
+
+//* ----- YAZMA -----
+
+person.bYear = 1995;
+person.languages = "Turkish-English";
+person.weight = 80;
+
+//!     Burada yaptığımız değişiklikler yukarıdaki alanımızı da etkiler.
+
+console.log(person);
+
+/*  --------------------------------------------------------------------------  */
+//..                            NESTED OBJECTS                                  */
+/*  --------------------------------------------------------------------------  */
+
+//!     Objeler itere edilebilir yapılar değildir. Bir döngü ile objeyi dolaşamayız.
+
+const persons = {
+  //  İlk yazılan key:'den sonra value.
+  adam: {
+    surname: "Jhonson",
+    idNumber: "82733932838",
+    bDay: "07/07/1997",
+    salary: 70000,
+  },
+  tony: {
+    surname: "Hecker",
+    idNumber: "2323293293",
+    bDay: "03/02/1990",
+    salary: 50000,
+  },
+};
+
+console.log(persons.adam.idNumber);
+console.log(persons["tony"]["salary"]);
+
+/* -------------------------------------------------------------------------- */
+//..               JSON     -->    JavaScript Object Notation                 */
+/* -------------------------------------------------------------------------- */
+
+const people = [
+  {
+    name: "gabriel",
+    lastName: "grotum",
+    id: "208720237403",
+    salary: 120000,
+  },
+  {
+    name: "tatum",
+    lastName: "hoytum",
+    id: "20484923442",
+    salary: 77000,
+  },
+  {
+    name: "robin",
+    lastName: "papara",
+    id: "5958303345",
+    salary: 45000,
+  },
+];
+
+people.forEach((p) => console.log(p.name));
+people.forEach((p) => console.log(p.salary));
+people.forEach((p) => console.log(p["id"]));
+
+const key = prompt("Which detail you wanna learn? name,lastName,id,salary");
+people.forEach((p) => console.log(p[key]));
