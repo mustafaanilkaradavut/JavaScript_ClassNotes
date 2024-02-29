@@ -184,7 +184,7 @@ const [customer1, customer5] = customer; //__ Burada verdiğimiz değişkenler s
 console.log(customer1, customer5);
 
 /* -------------------------------------------------------------------------- */
-//..                                   REST                                   */
+//..                              REST     (...)                              */
 /* -------------------------------------------------------------------------- */
 
 //? REST operatörü kullanıcı tarafından girilen değeleri dizi içerisine konumlandırır. Çeşitli kullanım alanları vardır.
@@ -210,3 +210,17 @@ const info = {
 
 const { age, ...story } = info; //?    Üç nokta en sona gelmek zorunda ve geri kalan tüm dataları kullanır.
 console.log(story);
+
+//! 2- Bir fonksiyonun argümanlarını diziye çevirmek için kullanılabilir.
+
+const sum = (a, b) => a + b;
+console.log(sum(1, 5, 2, 7, 9)); //*  ------>  6
+
+const sum2 = (...numbers) => {
+  //* Bu şekilde sayıları diziye çevirmiş oluyoruz.
+  return numbers.reduce((a, b) => a + b);
+};
+
+console.log(sum2(1, 5, 2, 7, 9));
+
+//?   REST (...) ile non-iterable olan sayıları iterable hale (diziye) çevirmiş oluruz.
