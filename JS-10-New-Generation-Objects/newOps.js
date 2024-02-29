@@ -90,3 +90,37 @@ const {
 
 console.log(name, job);
 console.log(name2Ad, name2Job);
+
+//..                Example
+const team = [
+  {
+    name: "Josh",
+    surname: "Barry",
+    job: "developer",
+    age: 30,
+  },
+  {
+    name: "John",
+    surname: "Barry",
+    job: "tester",
+    age: 45,
+  },
+  {
+    name: "Hazel",
+    surname: "Nut",
+    job: "team lead",
+    age: 40,
+  },
+];
+
+console.log("***************");
+
+team.forEach((person) => {
+  const { name, surname, job, age } = person;
+  console.log("Name:", person.name);
+  console.log("Surname:", person.surnames);
+  console.log("Job:", person.job);
+  console.log("Age:", person.name);
+  console.log("Name:", person.name);
+  console.log("****************");
+});
