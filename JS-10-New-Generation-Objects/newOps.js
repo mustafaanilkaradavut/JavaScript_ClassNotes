@@ -49,6 +49,9 @@ const { id: pro1Id, price: pro1Price } = product2;
 console.log("PRO1:", pro1Id);
 console.log("PRO1", pro1Price);
 
+//! Destructuring ile tek satır bir çok objenin key'i değişken hale getirebilir.
+//* const { id, brand, price, type } = product;
+
 //?         NESTED DESTRUCTURING
 
 const people = {
