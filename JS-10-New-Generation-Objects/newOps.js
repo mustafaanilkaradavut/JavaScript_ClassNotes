@@ -251,3 +251,58 @@ console.log(sentenceArray);
 const numbs = [1, 3, 4, 5];
 // console.log(Math.max(numbs)); //* NaN
 console.log(Math.max(...numbs));
+
+//?                 Nested
+
+const staff = {
+  staff1: {
+    name: "Hulk",
+    surname: "Gollagh",
+    dob: "1990",
+    job: "developer",
+    salary: "140000",
+    drivingLicense: true,
+  },
+  staff2: {
+    name: "John",
+    surname: "Sweet",
+    dob: "1990",
+    job: "tester",
+    salary: "110000",
+    drivingLicense: false,
+  },
+  staff3: {
+    name: "Steve",
+    surname: "Job",
+    dob: "2000",
+    job: "developer",
+    salary: "90000",
+    drivingLicense: true,
+  },
+};
+
+//?   Javascript'de objeler default olarak iterable değildir. Ama for in ve for of döngüleri ile itere edilebilirler.
+
+//?   Objelerin key ve value'larını okumak için built-in metotlar vardır. Bu metotlar aslında objelerin key ve/veya value'larını bir dizi olarak döndürür.
+
+//!             FOR - IN
+//*     for(key in object)
+//*     // code block to be executed
+//*     }
+
+//?   s --> Objedeki her bir key i gösterir.
+for (let s in staff) {
+  // console.log(s);
+  // console.log(staff[s]); //__  square bracket --->  Her bir objeyi getirir.
+  console.log(staff[s].salary); //__ square bracket --->  Her bir maaşı getirir.
+}
+
+//..            Kullanışlı Object Metotları
+
+console.log(Object.keys(staff)); //* Objenin Key'lerini array olarak döndürür.
+console.log(Object.values(staff)); //* Objenin Value'larını array olarak döndürür.
+console.log(Object.values(staff.staff2)); //* Objenin Value'larını array olarak döndürür.
+
+//?   Entries --> Key ve values çiftini array olarak döndürür.
+console.log(Object.entries(staff));
+console.log(Object.entries(staff.staff3));
