@@ -286,7 +286,7 @@ const staff = {
 //?   Objelerin key ve value'larını okumak için built-in metotlar vardır. Bu metotlar aslında objelerin key ve/veya value'larını bir dizi olarak döndürür.
 
 //!             FOR - IN
-//*     for(key in object)
+//*     for (key in object) {
 //*     // code block to be executed
 //*     }
 
@@ -306,3 +306,18 @@ console.log(Object.values(staff.staff2)); //* Objenin Value'larını array olara
 //?   Entries --> Key ve values çiftini array olarak döndürür.
 console.log(Object.entries(staff));
 console.log(Object.entries(staff.staff3));
+
+//!             FOR - OF
+//*     for (let x of iterable ) {
+//*     // code block to be executed
+//*     }
+
+for (let key of Object.keys(staff)) {
+  console.log(key);
+  console.log(staff[key].salary); //* square bracket
+}
+
+for (let v of Object.values(staff)) {
+  console.log(v);
+  console.log(v.job);
+}
