@@ -168,3 +168,45 @@ const printDataDestrAir = ({ id, desc, createdTime }) => {
 printData(data);
 printDataDestr(data);
 printDataDestrAir(data);
+
+/* -------------------------------------------------------------------------- */
+//..                           DESTRUCTURING (ARRAY)                          */
+/* -------------------------------------------------------------------------- */
+
+const customer = ["Joseph", "Stephen", "Galadriel", "Saruman"];
+let Joseph = customer[0];
+
+let joseph = customer[0];
+console.log(customer);
+
+const [customer1, customer5] = customer; //__ Burada verdiğimiz değişkenler sırasıyla customer array'indeki değerleri alır.
+
+console.log(customer1, customer5);
+
+/* -------------------------------------------------------------------------- */
+//..                                   REST                                   */
+/* -------------------------------------------------------------------------- */
+
+//? REST operatörü kullanıcı tarafından girilen değeleri dizi içerisine konumlandırır. Çeşitli kullanım alanları vardır.
+
+//! 1- Bir dizi veya object'deki bazı değerlerden geri kalanlarını ayrı dizi yada objelere kopyalanmasını sağlayabilir..
+
+//__        REST: Array
+
+const cars = ["BMW", "Volvo", "Mercedes", "Lamborgini", "Ferrari"];
+const [car1, car2, car3, ...ElectiricCars] = cars;
+
+console.log(car1, car2, car3);
+console.log(ElectiricCars);
+
+//__         REST: Object
+
+const info = {
+  name: "Sauron",
+  surname: "Nazgul",
+  job: "Enemy",
+  age: 20484,
+};
+
+const { age, ...story } = info; //?    Üç nokta en sona gelmek zorunda ve geri kalan tüm dataları kullanır.
+console.log(story);
