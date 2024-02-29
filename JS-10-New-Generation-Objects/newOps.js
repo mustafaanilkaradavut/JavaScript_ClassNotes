@@ -136,4 +136,35 @@ const showObj = function () {
   };
 };
 
+//* function'un dondurdugu obje dogrudan destructuring yapılabilir.
+// let { name, surname, job, age } = objGoster();
+
+// console.log(name, surname);
+// console.log("Age:", ++age);
+
 console.log(showObj());
+
+//? Function parametresi
+
+const data = {
+  id: "123",
+  desc: "This is top secret information",
+  createdTime: "1900",
+};
+
+const printData = (data) => {
+  console.log(` ${data.id} - ${data.desc} - ${data.createdTime}`);
+};
+
+const printDataDestr = (data) => {
+  const { id, desc, createdTime } = data;
+  console.log(` ${id} - ${desc} - ${createdTime}`);
+};
+
+const printDataDestrAir = ({ id, desc, createdTime }) => {
+  console.log(` ${id} - ${desc} - ${createdTime}`);
+};
+
+printData(data);
+printDataDestr(data);
+printDataDestrAir(data);
