@@ -124,3 +124,16 @@ team.forEach((person) => {
   console.log("Name:", person.name);
   console.log("****************");
 });
+
+//!         Functıonlarda Destructuring Kullanımı
+
+const showObj = function () {
+  return {
+    name: "Ruth",
+    surname: "McKallighana",
+    job: "Team Lead",
+    age: 40,
+  };
+};
+
+console.log(showObj());
