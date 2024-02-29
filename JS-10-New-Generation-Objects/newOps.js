@@ -221,6 +221,33 @@ const sum2 = (...numbers) => {
   return numbers.reduce((a, b) => a + b);
 };
 
-console.log(sum2(1, 5, 2, 7, 9));
-
+console.log("Summary:", sum2(1, 5, 2, 7, 9));
 //?   REST (...) ile non-iterable olan sayıları iterable hale (diziye) çevirmiş oluruz.
+
+/* -------------------------------------------------------------------------- */
+//..                              SPREAD   (...)                              */
+/* -------------------------------------------------------------------------- */
+
+//?   Spread operatörü ise iterables olan bir elemanı bireysel değerler haline getirirler.
+
+const airVehicle = ["helicopter", "drone", "plane", "rocket"];
+const landVehicle = ["car", "motorbike", "bikecyle"];
+
+const vehicles = [airVehicle, landVehicle]; //*    Nested
+
+const flatVehicles = [...airVehicle, ...landVehicle];
+//? iterable durumdan non-iterable duruma geçer.
+console.log(flatVehicles);
+
+//?                 Example
+
+const sentence = "We are humans who be strong together";
+const sentenceArray = [...sentence];
+console.log(sentenceArray);
+
+//?                 Example
+//?      Spread ile bir iterable(array), non-iterable çevrilebilir.
+
+const numbs = [1, 3, 4, 5];
+// console.log(Math.max(numbs)); //* NaN
+console.log(Math.max(...numbs));
