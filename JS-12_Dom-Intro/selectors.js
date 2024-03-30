@@ -30,12 +30,12 @@ headerText.style.border = "2px solid red";
 const addBtn = document.getElementById("btn");
 console.log(addBtn);
 
-//? HTML elementlerininin İçerikleri okuma ve değiştirme
-//?----------------------------------------
+//? HTML elementlerininin içeriklerini okuma ve değiştirme.
+//? ------------------------------------------------------
 const htmlLi = document.getElementById("html-li");
 htmlLi.style.color = "red";
 
-//? bir text elementinin içeriği aşağıdaki attribute'ler ile degisitirlebilir.
+//? Bir text elementinin içeriği aşağıdaki attribute'ler ile değiştirilebilir..
 //! textContent, innerText, innerHTML
 console.log(htmlLi.textContent);
 htmlLi.textContent = "HTML5";
@@ -48,7 +48,9 @@ document.getElementById("react-li").innerHTML = "React JS";
 document.getElementById("react-li").innerHTML =
   "<h2 style='color: blue'>REACT JS</h2>";
 
-//?! input'ların degerinin okunması/yazılması
+//__ Sensitive verilerin olduğu uygulama ve sayfalarda güvenlik sebebiyle innerHTML kullanmamalıyız.
+
+//?! input'ların değerinin okunması ve yazılması.
 const myInput = document.getElementById("input");
 console.log(myInput.value);
 
