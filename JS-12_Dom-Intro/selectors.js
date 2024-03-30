@@ -61,21 +61,20 @@ addBtn.value = "SUBMIT";
 /* -------------------------------------------------------------------------- */
 
 const allLi = document.getElementsByTagName("li");
-console.log(allLi); //? HTML Collection
+console.log(allLi); //__ HTML Collection
 
-//?HTML collection'daki her bir elemente indisleme ile erişilebilir.
+//__ HTML collection'daki her bir elemente indisleme ile erişilebilir.
 console.log(allLi[1].textContent);
 allLi[2].textContent = "JS-React";
 
-//? Tplu bir şekilde erişim için for yapıları kullanılabilir.
+//? Toplu bir şekilde erişim için for yapıları kullanılabilir.
 for (let li of allLi) {
   console.log(li.textContent);
 }
 
 //! array-like grubunda direk array metotları kulanılamamz.
 // allLi.forEach((li) => console.log(li))
-
-//? Çözüm olarak array-like grubu array'e çevirilebilri.
+//__ Çözüm olarak array-like grubu array'e çevirilebilriz.
 
 //? 1-spread
 const arrAllLi = [...allLi];
@@ -85,9 +84,11 @@ arrAllLi.forEach((li) => (li.style.color = "fuchsia"));
 //? 2-array.from()
 console.log(Array.from(allLi));
 Array.from(allLi).map((li) => (li.style.backgroundColor = "green"));
-//*===========================================
-//*          GETELEMENTSBYCLASSNAME()
-//*===========================================
+
+/* -------------------------------------------------------------------------- */
+//..                        GETELEMENTSBYCLASSNAME()                          */
+/* -------------------------------------------------------------------------- */
+
 const myList = document.getElementsByClassName("list");
 console.log(myList); //? HTML Collection
 
