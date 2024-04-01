@@ -12,11 +12,13 @@ newLi.appendChild(textLi);
 //__ 4 - Yeni oluşan elementi DOM tree'ye ekleriz.
 document.querySelector("ul").appendChild(newLi);
 
-//?* 2. bir li olusturalım
+/* -------------------------------------------------------------------------- */
+
+//* 2. bir li olusturalım
 const newLi2 = document.createElement("li");
 newLi2.textContent = "C++";
 
-//? Element.before() veya element.after() ile bir elementi istediğmiz elementin onune veya devamına eklemek mümkündür.
+//? element.before() veya element.after() ile bir elementi istediğimiz elementin önüne veya devamına eklemek mümkündür.
 const react = document.querySelector("ul li:nth-child(4)");
 react.before(newLi2, newLi);
 
