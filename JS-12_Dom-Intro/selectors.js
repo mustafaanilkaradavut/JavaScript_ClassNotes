@@ -97,11 +97,12 @@ myList[0].innerText = "HTML Dersleri";
 //? Ornek
 document.getElementsByClassName("item-list")[0].style.color = "hotpink";
 
-//* ========================================
-//*              QUERYSELECTOR()
-//* ========================================
-// ! Query Selector ile id, tag, class seçilebilir.
-//! bu secici akısta gördügü ilk elementi secer.
+/* -------------------------------------------------------------------------- */
+//..                               QUERYSELECTOR()                            */
+/* -------------------------------------------------------------------------- */
+
+//! Query Selector ile id, tag, class seçilebilir.
+//! Bu seçici akışta gördüğü ilk elementi seçer.
 
 //? id almak için (#)
 console.log(document.querySelector("#btn"));
