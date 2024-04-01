@@ -110,8 +110,8 @@ console.log(document.querySelector("#btn"));
 //? class almak için (.)
 console.log(document.querySelector(".item-list"));
 
-//? tag almak için
-console.log(document.querySelector("li")); //? ilk gördugu elementi secer
+//? tag almak için fakat ilk elementi getirir.
+console.log(document.querySelector("li")); //? ilk gördüğü elementi seçer.
 
 //? CSS selectorleri querySelector ile kullanılabilir.
 const myH3 = document.querySelector("main section.item-list h3");
@@ -120,11 +120,12 @@ console.log(myH3);
 const xyz = document.querySelector(".item-list ul li:nth-child(3)");
 xyz.style.backgroundColor = "gray";
 
-//* ========================================
-//*              QUERYSELECTORALL()
-//* ========================================
-const liste = document.querySelectorAll(".item-list .list");
-console.log(liste); //? NodeList
+/* -------------------------------------------------------------------------- */
+//..                           QUERYSELECTORALL()                             */
+/* -------------------------------------------------------------------------- */
 
-//* querySelectorAll bir nodelist dondurur. Nodelist dahili olarak forEach metodunu barindirir. Ama istenirse spread veya Array.from() ile yine Array'e donusum yapilabilir.
+const liste = document.querySelectorAll(".item-list .list");
+console.log(liste); //? array değil - html collection değil NodeList döndürür. Yeni nesil bir türdür. forEach en önemli özelliğidir.
+
+//* querySelectorAll bir nodelist döndürür. Nodelist dahili olarak forEach metodunu barındırır. Ama istenirse spread veya Array.from() ile yine Array'e dönüşüm yapilabilir.
 liste.forEach((li) => console.log(li.innerText));
