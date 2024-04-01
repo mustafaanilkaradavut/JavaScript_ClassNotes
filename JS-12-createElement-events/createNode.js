@@ -14,7 +14,7 @@ document.querySelector("ul").appendChild(newLi);
 
 /* -------------------------------------------------------------------------- */
 
-//* 2. bir li olusturalım
+//.. 2. bir "li" oluşturalım. 
 const newLi2 = document.createElement("li");
 newLi2.textContent = "C++";
 
