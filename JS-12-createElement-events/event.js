@@ -1,13 +1,14 @@
-//* ==============================================
-//*                  EVENTS
-//* ===============================================
+/* -------------------------------------------------------------------------- */
+//..                                 EVENTS                                   */
+/* -------------------------------------------------------------------------- */
 
 console.log("****** EVENTS *******");
 
 const yazdir = () => document.write("Hello FS16");
 yazdir();
 
-//? Selectorler
+//?    Selectorler
+
 const h2 = document.querySelector(".add-item h2");
 const body = document.querySelector("body");
 const myInput = document.getElementById("input");
@@ -15,20 +16,20 @@ const addButton = document.getElementById("btn");
 const ul = document.querySelector("ul");
 const form = document.querySelector("form");
 
-//?event tanımlamalari
+//?   Event Tanımlamaları
 
-//* mouse h2 elemenitini üzerine geldiğinde tetiklenir
+//__ mouse h2 elemenitini üzerine geldiğinde tetiklenir.
 h2.onmouseover = function () {
   //   h2.style.color = "red"
   h2.classList.add("red", "center");
 };
 
-//* mouse h2 elemenitinin üzerinden ayrıldığınıda tetiklenir
+//__ mouse h2 elementenin üzerinden ayrıldığında tetiklenir.
 h2.onmouseout = () => {
   h2.classList.remove("red", "center");
 };
 
-//* DOM içeriklerinin tamamı yüklendikten sonra tetiklenen event (onload)
+//__ DOM içeriklerinin tamamı yüklendikten sonra tetiklenen event (onload).
 body.onload = function () {
   myInput.focus();
 };
