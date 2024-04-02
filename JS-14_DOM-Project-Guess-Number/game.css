@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P:regular);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: relative;
+  height: 300px;
+}
+h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+
+  top: 50%;
+}
+
+body {
+  font-family: "Press Start 2P";
+  color: white;
+  background-color: tomato;
+}
+
+.between {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.btn {
+  margin-top: 15px;
+  margin-left: 15px;
+  border: none;
+  font-family: inherit;
+  /*__ parent'tan inherit etsin alsın */
+  font-size: 30px;
+  padding: 20px 25px;
+  cursor: pointer;
+  background-color: #eee;
+  text-align: center;
+}
+
+.number {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 180px;
+  padding: 25px;
+  background: #eee;
+  color: #333;
+  font-size: 60px;
+  text-align: center;
+  transform: translate(-50%, 50%);
+  /*__ çizginin üzerinde görünsün maksadıyla yazdık */
+}
+main {
+  height: 600px;
+  color: #eee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.right {
+  width: 400px;
+  font-size: 20px;
+}
+
+.left {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.guess {
+  background: none;
+  border: 5px solid #eee;
+  /*__ parent'ın font-family'sini kalıtımsal olarak alıp, aynısını kullandık */
+  font-family: inherit;
+  color: inherit;
+  font-size: 40px;
+  text-align: center;
+  width: 300px;
+  display: block;
+  margin-bottom: 20px;
+  padding: 50px;
+}
+.msg {
+  margin-bottom: 150px;
+}
+.score {
+  margin-bottom: 40px;
+}
