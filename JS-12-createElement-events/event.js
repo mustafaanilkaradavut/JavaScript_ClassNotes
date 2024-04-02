@@ -7,7 +7,7 @@ console.log("****** EVENTS *******");
 const yazdir = () => document.write("Hello FS16");
 yazdir();
 
-//?    Selectorler
+//?    Selectörler
 
 const h2 = document.querySelector(".add-item h2");
 const body = document.querySelector("body");
