@@ -44,28 +44,28 @@ addButton.onclick = (e) => {
   //   console.log(e.target)
   //   console.log(e.target.value)
   //   console.log(e.target.id, e.target.name)
-  myInput.focus();
+  myInput.focus(); //* Bu kod parçacığı ile hata aldığımızda veya veri işlediğimizde focus özelliğini koruruz.
 
   if (!myInput.value.trim()) {
     alert("Lutfen bir icerik giriniz");
     return;
   }
-
+ 
   const li = document.createElement("li");
   li.textContent = myInput.value;
   ul.appendChild(li);
-  myInput.value = "";
+  myInput.value = ""; 
 };
 
-//? Form içerisindeki submit butonuna her basildiğinda bu onSubmit event 'i tetiklenir.
-//? submit eventi otomatik olarak enter tuşunun kullanımı sağlar.
+//__ Form içerisindeki submit butonuna her basıldığında bu onSubmit event'i tetiklenir.
+//__ submit eventi otomatik olarak enter tuşunun kullanımı sağlar.
 // form.onsubmit = function (e) {
-//   e.preventDefault() //? submit işlemin temel ozelliklerini (formu silmek, sayfayı refresh yapmak gibi) iptal
-//   //   console.log(e.target)
+//   e.preventDefault() //__ submit işleminin temel özelliklerini (formu silmek, sayfayı refresh yapmak gibi) iptal eder.
+//   console.log(e.target)
 
 //   myInput.focus()
 
-//   if (!myInput.value.trim()) {
+//   if (!myInput.value.trim()) {  //* Trim ile spaceleri keseriz.
 //     alert("Lutfen bir icerik giriniz")
 //     return
 //   }
@@ -76,7 +76,7 @@ addButton.onclick = (e) => {
 //   myInput.value = ""
 // }
 
-//? input üzerinde klavyeden bir tusa basildiğinda tetiklenir.
+//__ input üzerinde klavyeden bir tuşa basıldığında tetiklenir.
 myInput.onkeydown = function (e) {
   //   console.log(e.code)
   if (e.code === "Enter") {
