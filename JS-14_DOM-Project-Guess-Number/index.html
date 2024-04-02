@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./game.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Guess My Number</h1>
+      <p class="beetween">(1-20)</p>
+      <button class="btn again">Again</button>
+      <div class="number">?</div>
+    </header>
+
+    <main>
+      <section class="letf">
+        <input type="number" class="guess" />
+        <button class="btn check">Check</button>
+      </section>
+
+      <section>
+        <p class="msg">Game Starting...</p>
+        <p class="score-label">Score: <span class="score">10</span></p>
+        <p class="top-score-label">
+          Top-Score: <span class="top-score">0</span>
+        </p>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
