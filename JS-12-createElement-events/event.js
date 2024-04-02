@@ -29,11 +29,12 @@ h2.onmouseout = () => {
   h2.classList.remove("red", "center");
 };
 
-//__ DOM içeriklerinin tamamı yüklendikten sonra tetiklenen event (onload).
+//__ DOM içeriklerinin tamamı yüklendikten sonra tetiklenen event (onload). 
 body.onload = function () {
   myInput.focus();
 };
-//? DOMContentLoaded (metin v.b içerikler yüklenince tetiklenir. Resim, link gibi içeriklerin yüklenmesini beklemez)
+
+//__ DOMContentLoaded (metin v.b içerikler yüklenince tetiklenir. Resim, link gibi içeriklerin yüklenmesini beklemez.)
 // body.DOMContentLoaded = function () {
 //     myInput.focus()
 // }
