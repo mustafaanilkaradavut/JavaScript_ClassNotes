@@ -29,7 +29,7 @@ h2.onmouseout = () => {
   h2.classList.remove("red", "center");
 };
 
-//__ DOM içeriklerinin tamamı yüklendikten sonra tetiklenen event (onload). 
+//__ DOM içeriklerinin tamamı yüklendikten sonra tetiklenen event (onload).
 body.onload = function () {
   myInput.focus();
 };
@@ -50,11 +50,11 @@ addButton.onclick = (e) => {
     alert("Lutfen bir icerik giriniz");
     return;
   }
- 
+
   const li = document.createElement("li");
   li.textContent = myInput.value;
   ul.appendChild(li);
-  myInput.value = ""; 
+  myInput.value = "";
 };
 
 //__ Form içerisindeki submit butonuna her basıldığında bu onSubmit event'i tetiklenir.
@@ -80,6 +80,21 @@ addButton.onclick = (e) => {
 myInput.onkeydown = function (e) {
   //   console.log(e.code)
   if (e.code === "Enter") {
-    addButton.click();
+    addButton.click(); //__ Event kodu yazarken onClick fakat komut çağırdığımızda click veririz.
+  }
+};
+/* -------------------------------------------------------------------------- */
+//!                                 HOMEWORK
+/* -------------------------------------------------------------------------- */
+
+myInput.onkeyup = function (e) {
+  console.log(e.code);
+  if (e.code === "Backspace") {           //* Basılan tış Backspace ise şunlar gerçekleşir.
+    const move = ul.firstElementChild;    //* HTML ul elemanın alt öğesini alır ve move adında değişkene atar.
+    if (move) {                           //* Eğer değişken boş değilse;
+      move.remove();                      //* İlk öğeyi listeden kaldırır.
+    } else {                              
+      alert("Silinecek bir öge yok");     //* Silinecek bir öğe kalmadıysa alert verilir.
+    }
   }
 };
