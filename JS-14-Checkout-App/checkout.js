@@ -33,6 +33,7 @@ const TAX_RATE = 0.18;
 //? Selectors
 const deleteAllBtn = document.querySelector(".delete-div .fa-trash-can");
 const products = document.querySelector("article.products");
+
 //? EVENT HANDLERS
 
 deleteAllBtn.addEventListener("click", (e) => {
