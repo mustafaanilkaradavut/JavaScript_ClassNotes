@@ -66,8 +66,8 @@ products.addEventListener("click", (e) => {
     // const discountedPrice = document.getElementById("discounted-price")
     // console.log(discountedPrice.innerText)
     
-    //?     Adet sayısı değiştirtikten sonra değişen fiyatı hesaplayacak bir event kurarız.
-    
+    //?     Adet sayısı değiştikten sonra değişen fiyatı hesaplayacak bir event kurarız.
+
     calculatePrice(e.target);
   } else if (e.target.classList.contains("fa-minus")) {
     if (e.target.nextElementSibling.textContent > 1) {
@@ -82,19 +82,18 @@ products.addEventListener("click", (e) => {
 
 const calculatePrice = (btn) => {
   const discountedPrice = btn
-    .closest(".product-info")
+    .closest(".product-info")    //__   En yakın ata'ya gidip değerleri manipüle etmeye çalışırız.
     .querySelector("#discounted-price");
 
   const productPrice = btn
     .closest(".buttons-div")
     .querySelector("#product-price");
 
-  const quantity = btn.parentNode.querySelector("#quantity");
-
+  const quantity = btn.parentNode.querySelector("#quantity"); 
+  
   productPrice.textContent = (
     quantity.textContent * discountedPrice.textContent
-  ).toFixed(2);
-
+  ).toFixed(2); //__ tofixed ile virgülden sonraki kısımda maximum 2 hane olacak şekilde ayarlarız.
   calculateTotalPrice();
 };
 
