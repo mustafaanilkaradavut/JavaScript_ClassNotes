@@ -112,7 +112,8 @@ const calculateTotalPrice = () => {
 
   const sum = total + taxPrice + shippingPrice;
 
-  //__ DOM'a sonuçları yazdırma
+  //__     DOM'a sonuçları yazdırma
+
   const selectedPrice = document.querySelector("#selected-price");
   selectedPrice.textContent = total.toFixed(2);
 
