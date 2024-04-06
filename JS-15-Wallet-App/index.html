@@ -24,30 +24,30 @@
     </header>
 
     <main class="container" style="max-width: 800px">
-      <form id="harcama-formu" class="row g-3 p-3 mt-4 border rounded-4 m-0">
-        <h4 class="text-center">Harcama Formu</h4>
+      <form id="spending-form" class="row g-3 p-3 mt-4 border rounded-4 m-0">
+        <h4 class="text-center">Spending Form</h4>
         <div class="col-6">
-          <label for="tarih" class="form-label">Tarih</label>
-          <input type="date" class="form-control" id="tarih" required />
+          <label for="date-info" class="form-label">Date</label>
+          <input type="date" class="form-control" id="date-info" required />
         </div>
         <div class="col-6">
-          <label for="miktar" class="form-label">Harcama Miktar</label>
+          <label for="amount" class="form-label">Spending Amount</label>
           <input
             type="number"
             class="form-control"
-            id="miktar"
+            id="amount"
             placeholder="1000 ₺"
             step="0.01"
             min="0"
             required />
         </div>
         <div class="col-12">
-          <label for="harcama-alani" class="form-label">Harcama Alanı</label>
+          <label for="spending-area" class="form-label">Spending Area</label>
           <input
             type="text"
             class="form-control"
-            id="harcama-alani"
-            placeholder="Kira, Fatura, Kredi Kartı"
+            id="spending-area"
+            placeholder="Rent, Bills, Credit Card"
             required />
         </div>
 
@@ -73,17 +73,17 @@
         </button>
       </form>
       <table
-        id="harcama-tablosu"
+        id="spending-tablosu"
         class="table table-bordered table-hover table-striped mt-4 text-center">
         <thead>
           <tr>
-            <th scope="col" class="w-25">Tarih</th>
-            <th scope="col" class="w-50">Harcama Alanı</th>
+            <th scope="col" class="w-25">date-info</th>
+            <th scope="col" class="w-50">spending Alanı</th>
             <th scope="col">Miktar (₺)</th>
             <th scope="col">İşlem</th>
           </tr>
         </thead>
-        <tbody id="harcama-body">
+        <tbody id="spending-body">
           <!-- <tr>
             <th scope="row">1</th>
             <td>Mark</td>
