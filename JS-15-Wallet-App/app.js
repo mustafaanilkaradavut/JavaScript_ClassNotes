@@ -1,4 +1,4 @@
-//? Selectors
+//..      Selectors
 
 const ekleBtn = document.getElementById("ekle-btn");
 const gelirInput = document.getElementById("gelir-input");
@@ -8,15 +8,18 @@ const gelirinizTd = document.getElementById("geliriniz");
 const giderinizTd = document.getElementById("gideriniz");
 const kalanTd = document.getElementById("kalan");
 
-//& Variables
+//..      Variables
 
 let gelirler = 0;
 let harcamaListesi = [];
 
-//* Ekle Formu
+//?     Ekle Formu
+
+//__ HTML tarafından gelen bilgi hiç bir şey yapmazsak string olarak tanımlanır.
+
 ekleFormu.addEventListener("submit", (e) => {
   e.preventDefault(); //! reload u engellemek için
-  gelirler = gelirler + Number(gelirInput.value);
+  gelirler = gelirler + Number(gelirInput.value);  //__ Burada HTML'den gelen string sayıyı Number yapmak için number ekleriz.
   ekleFormu.reset();
   // console.log(gelirler)
   localStorage.setItem("gelirler", gelirler);
