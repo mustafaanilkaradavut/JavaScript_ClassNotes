@@ -27,7 +27,7 @@ ekleFormu.addEventListener("submit", (e) => {
   // gelirinizTd.textContent = gelirler
 });
 
-//! Harcama Formu
+//..      Harcama Formu
 
 const harcamaFormu = document.getElementById("harcama-formu");
 const tarihInput = document.getElementById("tarih");
@@ -125,7 +125,7 @@ const hesaplaVeGuncelle = () => {
 //? Event listeners
 
 window.addEventListener("load", () => {
-  gelirler = Number(localStorage.getItem("gelirler")) || 0; //! Local storage den gelirleri al numberlaştır. Veri yoksa 0 ata
+  gelirler = Number(localStorage.getItem("gelirler")) || 0; //! Local storage'den gelirleri al numberlaştır. Veri yoksa 0 ata.
   harcamaListesi = JSON.parse(localStorage.getItem("harcamalar")) || [];
 
   harcamaListesi.forEach((harcama) => {
