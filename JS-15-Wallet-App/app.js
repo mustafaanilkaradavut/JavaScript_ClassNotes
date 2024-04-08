@@ -80,7 +80,8 @@ const harcamayiDomaYaz = ({ id, miktar, tarih, alan }) => {
   //! 2. yöntem
   const tr = document.createElement("tr");
 
-  const appendTd = (content) => {             //__ append and prepend öne-arkaya ekle parametleridir.
+  const appendTd = (content) => {
+    //__ append and prepend öne-arkaya ekle parametleridir.
     const td = document.createElement("td");
     td.textContent = content;
     return td;
@@ -111,18 +112,19 @@ const harcamayiDomaYaz = ({ id, miktar, tarih, alan }) => {
 
 const hesaplaVeGuncelle = () => {
   const giderler = harcamaListesi.reduce(
+    //__  Array'lerde toplama yapmak için kullanılır. (reduce)
     (toplam, harcama) => toplam + Number(harcama.miktar),
     0
   );
 
   // console.log(giderler)
-
+  //*   Ekrana bastırmak için tanımladığımız kodları işleriz.
   giderinizTd.textContent = giderler;
   gelirinizTd.textContent = gelirler;
   kalanTd.textContent = gelirler - giderler;
 };
 
-//? Event listeners
+//..      Event listeners
 
 window.addEventListener("load", () => {
   gelirler = Number(localStorage.getItem("gelirler")) || 0; //! Local storage'den gelirleri al numberlaştır. Veri yoksa 0 ata.
@@ -155,7 +157,7 @@ temizleBtn.addEventListener("click", () => {
     harcamaListesi = [];
     gelirler = 0;
     harcamaBody.innerHTML = "";
-    // localStorage.clear() // Tüm localstorage i siler
+    // localStorage.clear() //?    Tüm localstorage silinir.
     localStorage.removeItem("gelirler");
     localStorage.removeItem("harcamalar");
     hesaplaVeGuncelle();
