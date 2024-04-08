@@ -50,7 +50,7 @@ harcamaFormu.addEventListener("submit", (e) => {
   // console.log(yeniHarcama)
   harcamaListesi.push(yeniHarcama);
   // console.log(harcamaListesi)
-  localStorage.setItem("harcamalar", JSON.stringify(harcamaListesi));
+  localStorage.setItem("harcamalar", JSON.stringify(harcamaListesi)); //__ Harcama listesini string bir değere dönüştürmek için JSON'larız.
   harcamayiDomaYaz(yeniHarcama);
 
   harcamaFormu.reset();
