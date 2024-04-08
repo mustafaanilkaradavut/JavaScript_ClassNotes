@@ -19,7 +19,7 @@ let harcamaListesi = [];
 
 ekleFormu.addEventListener("submit", (e) => {
   e.preventDefault(); //! reload u engellemek için
-  gelirler = gelirler + Number(gelirInput.value);  //__ Burada HTML'den gelen string sayıyı Number yapmak için number ekleriz.
+  gelirler = gelirler + Number(gelirInput.value); //__ Burada HTML'den gelen string sayıyı Number yapmak için number ekleriz.
   ekleFormu.reset();
   // console.log(gelirler)
   localStorage.setItem("gelirler", gelirler);
@@ -44,6 +44,7 @@ harcamaFormu.addEventListener("submit", (e) => {
     miktar: miktarInput.value,
     alan: harcamaAlaniInput.value,
     id: new Date().getTime(),
+    //__ Bu verilen ID ile hangisini sileceğimize karar vereceğimizi belirtiriz. Bunu da uniq bir sayı elde ederek yaparız.
   };
 
   // console.log(yeniHarcama)
@@ -57,7 +58,7 @@ harcamaFormu.addEventListener("submit", (e) => {
   hesaplaVeGuncelle();
 });
 
-//& Harcamayı Dom'a yaz
+//..      Harcamayı Dom'a yaz
 
 const harcamayiDomaYaz = ({ id, miktar, tarih, alan }) => {
   // const {id, miktar, tarih, alan} = yeniHarcama
@@ -135,7 +136,7 @@ window.addEventListener("load", () => {
   gelirinizTd.textContent = gelirler;
 
   hesaplaVeGuncelle();
-  tarihInput.valueAsDate = new Date();
+  tarihInput.valueAsDate = new Date(); //__ Güncel tarihi default olarak atamasını yapar.
 });
 
 harcamaBody.addEventListener("click", (e) => {
