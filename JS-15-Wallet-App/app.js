@@ -64,7 +64,7 @@ const harcamayiDomaYaz = ({ id, miktar, tarih, alan }) => {
   // const {id, miktar, tarih, alan} = yeniHarcama
   // console.log(id, miktar, tarih, alan)
 
-  //! 1. yöntem (Eski ve güvenlik açığı nedeniyle kullanılmaması gereken)
+  //! 1. yöntem (Eski ve güvenlik açığı nedeniyle kullanılmaması gereken bir yöntemdir.)
   // harcamaBody.innerHTML += `
   //     <tr>
   //         <td>${tarih}</td>
@@ -72,7 +72,6 @@ const harcamayiDomaYaz = ({ id, miktar, tarih, alan }) => {
   //         <td>${miktar}</td>
   //         <td><i id=${id} class="fa-solid fa-trash-can text-danger"  type="button"></i></td>
   //     </tr>
-
   // `
   //^ innerHTML kullandığımızda aşağıdaki kodları harcama alanına yazarsak istemediğimiz şekilde bir tablo düzeni ile karşılaşırız.
   //^ <h2>Hello World!</h2><p>Have a nice day!</p>
@@ -81,7 +80,7 @@ const harcamayiDomaYaz = ({ id, miktar, tarih, alan }) => {
   //! 2. yöntem
   const tr = document.createElement("tr");
 
-  const appendTd = (content) => {
+  const appendTd = (content) => {             //__ append and prepend öne-arkaya ekle parametleridir.
     const td = document.createElement("td");
     td.textContent = content;
     return td;
@@ -98,17 +97,17 @@ const harcamayiDomaYaz = ({ id, miktar, tarih, alan }) => {
   };
 
   tr.append(
-    appendTd(tarih), //tarih td si
-    appendTd(alan), //alan td si
-    appendTd(miktar), //miktar td si
-    createLastTd() // Çöp kutusu ve id yi ekler
+    appendTd(tarih), //? tarih td si
+    appendTd(alan), //? alan td si
+    appendTd(miktar), //? miktar td si
+    createLastTd() //? Çöp kutusu ve id yi ekler
   );
 
-  harcamaBody.append(tr); //& son girileni alta ekler
-  // harcamaBody.prepend(tr) //& son girileni öne ekler
+  harcamaBody.append(tr); //? son girileni alta ekler.
+  // harcamaBody.prepend(tr) //? son girileni öne ekler.
 };
 
-//& hesaplaVeGuncelle
+//..      hesaplaVeGuncelle
 
 const hesaplaVeGuncelle = () => {
   const giderler = harcamaListesi.reduce(
