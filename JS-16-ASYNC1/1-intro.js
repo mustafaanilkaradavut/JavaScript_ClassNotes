@@ -56,11 +56,11 @@
 //   }
 // }, 1000)
 
-//! Callback Hell (nested ve birbirine bagli callback'ler)
-//!-----------------------------------------------------
-//* Eger birbirine bagimli asenkron kodlarin yazilmasi gerekirse,nested callback
-//* yapisinin kullanilmasi gerekebilir. Fakat bu iyi bir programlama yaklasimi degildir.
-// !callback hell olarak adlandirilan bu yapinin anlasilmasi ve surdurulebilirligi oldukca zordur.
+//! Callback Hell (nested ve birbirine bağlı callback'ler)
+
+//* Eğer birbirine bağımlı asenkron kodların yazılması gerekirse, nested callback yapısının kullanılması gerekebilir.
+//* Fakat bu iyi bir programlama yaklaşımı değildir.
+//? !callback hell olarak adlandırılan bu yapının anlaşılması ve sürdürülebilirliği oldukça zordur.
 
 setTimeout(() => {
   console.log("john:Hi"); //? veri isteği (req)
@@ -75,10 +75,13 @@ setTimeout(() => {
   }, 1000);
 }, 1000);
 
-//? COZUMLER:
-//?----------------------------------------------------
-//* 1- XMLHttpRequest (Eski yontem, Ornek: AJAX)
+//__         ÇÖZÜMLER:
+
+//* 1- XMLHttpRequest (Eski yöntem, Ornek: AJAX)
 //? https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
 //* 2- Promise (Custom async kod yazmak için elverişli- Advance)
-//! 3- Fetch API (Promise'in basitlestirilmis hali),
+
+//__ Güncel methodlar : 
+//! 3- Fetch API (Promise'in basitlestirilmis hali)       
 //! 4- ASYNC-AWAIT (Fetch API'nin makyajlanmis hali)
+ 
