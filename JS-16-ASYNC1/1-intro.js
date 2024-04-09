@@ -23,15 +23,15 @@
 // alert("Blocking") //* Senkron çalışmada bir komut cok uzun sürer ise uygulamayı bloklar.
 // console.time("timer")
 // gecikme(2000)
-// console.timeEnd("timer")
+// console.timeEnd("timer") //* console.time ve console.timeEnd ile debug amaçlı olarak kullanıp ölçüm yapabiliriz.
 
 // console.log("FS16")
 
-//! Asenkron (setTimeout()) - Belirli sure sonraya zaman kurar.
+//!             Asenkron (setTimeout()) - Belirli süre sonraya zaman kurar.
 
 // const timeoutID = setTimeout(() => {
 //   console.log("Timeout1 doldu")
-// }, 2000)
+// }, 2000) //* en az 2000ms sonra fonksiyonu çağır komutu veriyoruz.
 
 // setTimeout(() => {
 //   console.log("Timeout2 doldu")
