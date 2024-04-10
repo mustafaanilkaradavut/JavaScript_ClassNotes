@@ -16,6 +16,7 @@ fetch("https://api.github.com/users")
     console.log(res);
     //? Fetch api'da hatayı bizim yakalamamız gerekiyor.
     if (!res.ok) {
+      //* response'nin içindeki ok false ise ;
       throw new Error(`Something went wrong ${res.status}`);
     }
     return res.json();
@@ -24,13 +25,15 @@ fetch("https://api.github.com/users")
     // console.log(data)
     // userData = data
     // console.log(userData)
-    showUser(data);
+    showUser(data); //* Bize gelen bir veriyi fonksiyona yazıyoruz. Aşağıda bu parametreyi yakalıyoruz.
   })
   .catch((err) => displayError(err));
 
 const showUser = (data) => {
   console.log(data);
   const userSection = document.getElementById("users");
+
+  //__  API'den çektiğimiz verileri bastırmak için aşağıdaki kod dizinini yazarız.
 
   data.forEach((user) => {
     userSection.innerHTML += `
