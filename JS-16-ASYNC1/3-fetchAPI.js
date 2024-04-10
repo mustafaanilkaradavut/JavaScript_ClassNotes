@@ -2,13 +2,11 @@
 //..                              3 - FETCH API                               */
 /* -------------------------------------------------------------------------- */
 
-//? Dis kaynaklardan veri getirmek icin kullanilan basit bir arabirimdir.
-//? Ag istekleri yapmamizi ve cevaplari yontebilmemize olanak saglar.
-//? Javascript ortaminda en cok kullanilan Asenkron islem orneklerinin basinda
-//? gelmektedir.
+//? Dış kaynaklardan veri getirmek için kulanılan basit bir arabirimdir.
+//? Ağ istekleri yapmamızı ve cevapları yönetebilmemize olanak sağlar.
+//? Javascript ortamında en çok kullanılan Asenkron işlem örneklerinin başında gelmektedir.
 
-//? fetch() fonksiyonu veri getirmek istediginiz kaynagin yolunu gosteren zorunlu
-//? bir parametre almaktadir ve bu istegin cevabini gosteren bir Promise dondurmektedir.
+//__ fetch() fonksiyonu veri getirmek istediğiniz kaynağın yolunu gösteren zorunlu bir parametre almaktadır ve bu isteğin cevabını gösteren bir Promise döndürmektedir.
 
 console.log("FETCH");
 
@@ -16,7 +14,7 @@ console.log("FETCH");
 fetch("https://api.github.com/users")
   .then((res) => {
     console.log(res);
-    //? Fetch api'da hatayi bizim yakalamiz gerekiyor.
+    //? Fetch api'da hatayı bizim yakalamamız gerekiyor.
     if (!res.ok) {
       throw new Error(`Something went wrong ${res.status}`);
     }
