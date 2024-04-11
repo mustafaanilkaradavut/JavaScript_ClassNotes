@@ -36,7 +36,7 @@ const showUser = (data) => {
   //__  API'den çektiğimiz verileri bastırmak için aşağıdaki kod dizinini yazarız.
 
   data.forEach((user) => {
-    userSection.innerHTML += `
+    userSection.innerHTML += `   //__ Her bir user'ın içerisindeki verileri DOM'a basmak için back tick ve değer ile verilir.
       <h1>${user.login}</h1>
       <img src="${user.avatar_url}" alt="" width="200px" />
       <h3>${user.html_url}</h3>
