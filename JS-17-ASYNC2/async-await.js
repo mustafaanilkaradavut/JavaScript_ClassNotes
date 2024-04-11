@@ -48,14 +48,18 @@ const dipslayNews = (news) => {
               <img src="${
                 urlToImage || defaultImage //* burada verinin eğer bir resmi yok ise atamış olduğumuz default resim kullanılır.
               }" class="card-img-top" alt="...">
-              <div class="card-body">
+              <div class="card-body overflow-auto">
                   <h5 class="card-title">${title}</h5>
-                  <p class="card-text">${content || "No Content"}</p>
-                  <a href="${url}" target="_blank" class="btn btn-primary">Detail</a> //? Target blank diğer bir sekme'de açmak için eklenir...
-              </div>
-          </div>
-      `;
+                  <p class="card-text text-truncate p-5">${
+                    content || "No Content"
+                  }</p> 
+                  <a href="${url}" target="_blank" class="btn btn-primary bottom-0 position-absolute">Detail</a> 
+                  </div>
+                </div>
+              `;
   });
 };
 
+//? Target blank diğer bir sekme'de açmak için eklenir...
+//* Gelmeyen content için ne gösterileceğini belirleriz. "No content ile.
 getNews();
