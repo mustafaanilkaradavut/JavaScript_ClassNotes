@@ -13,11 +13,11 @@
 //* Yapılan istek yerine getirilip sonuç değerlerinin döndürülmesi ile kodun çalışması devam eder.
 
 const getNews = async () => {
-  //?   https://newsapi.org/v2/top-headlines?country=tr&apiKey=1a1a999e0d7240a6bd2dead87bcca78e&category=technology
+  //?   https://newsapi.org/v2/top-headlines?country=tr&apiKey=f33b836eabbd49888b8ef386ed77c55f&category=technology
 
   const BASE_URL = `https://newsapi.org/v2/`;
-  const API_KEY = `1a1a999e0d7240a6bd2dead87bcca78e`;
-  const queryString = `top-headlines?country=us&category=technology`;
+  const API_KEY = `f33b836eabbd49888b8ef386ed77c55f`;
+  const queryString = `top-headlines?country=tr&category=technology`; 
   const URL = `${BASE_URL}${queryString}&apiKey=${API_KEY}`;
 
   try {
