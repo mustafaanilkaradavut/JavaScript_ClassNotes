@@ -6,7 +6,7 @@ const totalPrice = (products) => {
   return products.reduce((sum, product) => sum + product.price, 0);
 };
 
-//? Global namespace
+//? Global namespace :  Bir yerde tanımlanan değişken (students) başka bir yerde tanımlanamaz.
 // const students = ["Canan", "Can"]
 
 myVariable = "my string"; //! use Strict -> myVariable is not defined
