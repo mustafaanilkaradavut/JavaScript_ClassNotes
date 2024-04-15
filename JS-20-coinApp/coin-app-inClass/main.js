@@ -11,7 +11,7 @@ console.log(form);
 
 //?   Form için Sumbit Event'inin tanımlanması
 
-form.addEventListener("sumbit", (e) => {
+form.addEventListener("submit", (e) => {
   console.log(e);
   e.preventDefault(); //! form eventinin tüm doğal davranışları disable eder.
   getCoinsData();

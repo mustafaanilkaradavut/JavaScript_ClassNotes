@@ -1,5 +1,5 @@
 //? export defatul ile paylaşıldığı için süslü parantezsiz ve herhangi bir isimle import edilebilir.
-import displayCoinsCard from "./displayCoins";
+import displayCoins from "./displayCoins";
 
 //? Named export
 
@@ -19,7 +19,7 @@ export const getCoins = async (keyword) => {
     if (!json.data.coins[0]) {
       alert("Coin can not be found");
     } else {
-      displayCoinCard(); //? displayCoins.js
+      displayCoins(); //? displayCoins.js
     }
   } catch (error) {
     console.log(error);
