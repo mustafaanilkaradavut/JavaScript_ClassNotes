@@ -1,3 +1,4 @@
+//? export defatul ile paylaşıldığı için süslü parantezsiz ve herhangi bir isimle import edilebilir.
 import displayCoinsCard from "./displayCoins";
 
 //? Named export
@@ -14,7 +15,6 @@ export const getCoins = async (keyword) => {
   try {
     const res = await fetch(URL, options);
     const json = await res.json();
-    console.log(json.data.coins[0]);
 
     if (!json.data.coins[0]) {
       alert("Coin can not be found");
