@@ -1,10 +1,11 @@
 const displayCoins = (coin) => {
   console.log(coin);
-  const { price, change, iconURL, name, symbol } = coin;
+  const { price, change, iconUrl, name, symbol, rank } = coin;
   const ul = document.querySelector("main .coins");
   const coinLi = document.createElement("li");
   coinLi.className = "coin";
   coinLi.innerHTML = `
+
   <div class="remove-icon">
     <i class="fas fa-window-close"></i>
   </div>
@@ -16,7 +17,7 @@ const displayCoins = (coin) => {
   <div class="coin-temp">${Number(price).toFixed(6)}</div>
 
   <figure>
-    <img class="coin-icon" src=${iconURL} alt="" />
+    <img class="coin-icon" src=${iconUrl} alt="" />
     <figcaption style='color: ${change < 0 ? "red" : "green"}'>
         <i class="fa-solid fa-chart-line"></i>
         <span>${change || "0.00"}</span>
@@ -26,11 +27,10 @@ const displayCoins = (coin) => {
  `;
   ul.append(coinLi);
 
-  //? Card içerisindeki sil butonu için event tanımlanması;
+  //? Card içerisindeki sil butonu için event tanimlamasi
   coinLi.querySelector(".remove-icon").addEventListener("click", () => {
     coinLi.remove();
   });
 };
-
 export default displayCoins;
 //?   Export default ile paylaşılmıştır.
