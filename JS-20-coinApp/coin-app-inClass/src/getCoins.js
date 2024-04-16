@@ -8,6 +8,7 @@ import axios from "axios";
 export const getCoins = async (keyword) => {
   //__ async ekleyerek bunu asenkron bir fonksiyon haline getiriyoruz.
   const URL = `https://api.coinranking.com/v2/coins?search=${keyword}`;
+  // const API_KEY = "coinrankingd01c9edb142af9027921c61740c6c920fe249ba21d651cb7";
 
   //   const options = {
   //     headers: { "x-access-token": API_KEY },
