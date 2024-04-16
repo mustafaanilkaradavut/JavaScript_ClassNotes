@@ -7,21 +7,18 @@ import { getCoins } from "./src/getCoins";
 //?   Selectors
 
 const form = document.querySelector("header form");
-console.log(form);
 
-//?   Form için Sumbit Event'inin tanımlanması
-
+//?   Form için submit event'nin tanımlanması
 form.addEventListener("submit", (e) => {
-  console.log(e);
-  e.preventDefault(); //! form eventinin tüm doğal davranışları disable eder.
-  getCoinsData();
-  e.target.reset(); //! formu silme işlemini aktif eder.
+  e.preventDefault(); //! form eventinin tüm doğal davranışlarını disable eder.
+  getCoinData();
+  e.target.reset(); //! formu silme davraşını aktif hale getirir.
 });
 
-const getCoinsData = () => {
+const getCoinData = () => {
   const input = document.querySelector("header form input").value;
   if (!input.trim()) {
-    alert("input must be entered");
+    alert("Input must be entered");
   } else {
     //? GET COIN
     getCoins(input);
