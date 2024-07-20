@@ -13,6 +13,7 @@ describe("recipe project detail", () => {
     cy.get('[data-test="Fattest"]').should("be.visible");
     // BURADAAKİ Fat kısmı dinamik olarak item.labelden geliyor. detail sayfasını inceler.
     cy.get("[data-test='Carbstest']").should("be.visible");
+    cy.get("[data-test='cup milktest']").should("be.visible");
     // BURADAAKİ Fat kısmı dinamik olarak item.labelden geliyor. detail sayfasını inceler.
   });
 });

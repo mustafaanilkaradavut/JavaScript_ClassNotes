@@ -50,6 +50,7 @@ const Details = () => {
             <p data-test={item.label + "test"} key={index}>
               {item.label} : {Math.round(item.total)}
             </p>
+            //__ Spesific bir test yapmak istersek uygulamasını yukarıdaki gibi yaparız.
           ))}
         </OtherPart>
         <ImgContainer>
