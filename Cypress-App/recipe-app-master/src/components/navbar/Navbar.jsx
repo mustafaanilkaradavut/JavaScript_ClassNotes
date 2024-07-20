@@ -19,8 +19,7 @@ const Navbar = () => {
         <MenuLink
           data-test="homeAbout"
           to="/about"
-          onClick={() => setIsOpen(!isOpen)}
-        >
+          onClick={() => setIsOpen(!isOpen)}>
           About
         </MenuLink>
 
@@ -32,8 +31,7 @@ const Navbar = () => {
           data-test="homeLogout"
           onClick={() => setIsOpen(!isOpen)}
           onMouseUp={() => sessionStorage.clear()}
-          to="/"
-        >
+          to="/">
           LOGOUT
         </MenuLink>
       </Menu>
